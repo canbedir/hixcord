@@ -1,8 +1,12 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-const AuthLayout = ({children}:{children:ReactNode}) => {
+interface AuthLayoutProps{
+    children:React.ReactNode
+}
+
+const AuthLayout = ({children}:AuthLayoutProps) => {
   return (
-    <div className='bg-slate-700 h-screen'>
+    <div className='h-screen flex items-center justify-center'>
         {children}
     </div>
   )
