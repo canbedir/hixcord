@@ -3,6 +3,7 @@ import { initialProfile } from '@/lib/initial-profile'
 import { db } from '@/lib/db';
 import { redirect } from 'next/navigation';
 import { Profile } from '@prisma/client';
+import { InitialModal } from '@/components/modals/initial-modals';
 
 let profile: Profile
 
@@ -23,7 +24,7 @@ const SetupPage = async() => {
     return redirect(`/servers/${server.id}`)
   }
 
-  return <div>Create a Server</div>
+  return <InitialModal/>
 }
 
 export default SetupPage
