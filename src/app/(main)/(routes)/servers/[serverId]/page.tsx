@@ -1,8 +1,9 @@
+import NavigationItem from '@/components/navigation/navigation-item'
 import React from 'react'
 
 const ServerIdPage = () => {
   return (
-    <div>ServerIdPage</div>
+    <div>server</div>
   )
 }
 
