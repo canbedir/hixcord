@@ -52,32 +52,34 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           </DropdownMenuItem>
         )}
         {isAdmin && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer text-white/75 focus:bg-indigo-500 dark:hover:text-white">
+          <DropdownMenuItem 
+           className="px-3 py-2 text-sm cursor-pointer text-black focus:text-white dark:text-white/75 focus:bg-indigo-500 dark:hover:text-white">
             Server Settings
             <Settings className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {isModerator && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer text-white/75 focus:bg-indigo-500 dark:hover:text-white">
+          <DropdownMenuItem 
+           className="px-3 py-2 text-sm cursor-pointer text-black focus:text-white dark:text-white/75 focus:bg-indigo-500 dark:hover:text-white">
             Manage Members
             <Users className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {isModerator && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer text-white/75 focus:bg-indigo-500 dark:hover:text-white">
+          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer text-black focus:text-white dark:text-white/75 focus:bg-indigo-500 dark:hover:text-white">
             Create Channel
             <PlusCircle className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {isModerator && <DropdownMenuSeparator />}
         {isAdmin && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer text-red-600 focus:bg-red-500 dark:hover:text-white">
+          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer focus:text-white text-red-600 focus:bg-red-500 dark:hover:text-white">
             Delete Server
             <Trash className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {!isAdmin && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer text-red-600 focus:bg-red-500 dark:hover:text-white">
+          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer focus:text-white text-red-600 focus:bg-red-500 dark:hover:text-white">
             Leave Server
             <LogOut className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
