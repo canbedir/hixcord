@@ -61,6 +61,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         )}
         {isModerator && (
           <DropdownMenuItem 
+           onClick={()=>onOpen("members",{server})}
            className="px-3 py-2 text-sm cursor-pointer text-black focus:text-white dark:text-white/75 focus:bg-indigo-500 dark:hover:text-white">
             Manage Members
             <Users className="h-4 w-4 ml-auto" />
