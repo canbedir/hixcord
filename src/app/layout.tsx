@@ -26,7 +26,7 @@ export default function RootLayout({
           )}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem={false}
             storageKey="hixcord-theme"
             disableTransitionOnChange
