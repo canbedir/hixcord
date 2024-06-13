@@ -82,7 +82,8 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
           </DropdownMenuItem>
         )}
         {!isAdmin && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer focus:text-white text-red-600 focus:bg-red-500 dark:hover:text-white">
+          <DropdownMenuItem onClick={()=>onOpen("leaveServer",{server})}
+           className="px-3 py-2 text-sm cursor-pointer focus:text-white text-red-600 focus:bg-red-500 dark:hover:text-white">
             Leave Server
             <LogOut className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
