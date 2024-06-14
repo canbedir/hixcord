@@ -76,7 +76,7 @@ const ServerSearch = ({ data }: ServerSearchProps) => {
         </kbd>
       </div>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Search all channels and members" />
+        <CommandInput placeholder="Where would you like to go?" />
         <CommandList>
           <CommandEmpty>No Results found</CommandEmpty>
           {data.map(({ label, type, data }) => {
