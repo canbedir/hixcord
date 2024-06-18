@@ -30,7 +30,7 @@ export const useChatQuery = ({apiUrl,paramKey,paramValue,queryKey}:ChatQueryProp
         data,
         fetchNextPage,
         hasNextPage,
-        isFetchNextPage,
+        isFetchingNextPage,
         status,
     } = useInfiniteQuery({
         queryKey: [queryKey],
@@ -43,7 +43,7 @@ export const useChatQuery = ({apiUrl,paramKey,paramValue,queryKey}:ChatQueryProp
         data,
         fetchNextPage,
         hasNextPage,
-        isFetchNextPage,
+        isFetchingNextPage,
         status,
     };
 }
