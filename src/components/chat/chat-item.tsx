@@ -27,7 +27,7 @@ interface ChatItemProps {
   timestamp: string;
   fileUrl: string | null;
   deleted: boolean;
-  currentMember: Member;
+  currentMember: Member | null;
   isUpdated: boolean;
   socketUrl: string;
   socketQuery: Record<string, string>;
@@ -55,6 +55,11 @@ const ChatItem = ({
   socketUrl,
   timestamp,
 }: ChatItemProps) => {
+
+  if(!currentMember){
+    return null
+  }
+
   const [isEditing, setIsEditing] = useState(false);
   const { onOpen } = useModal();
   const params = useParams();
