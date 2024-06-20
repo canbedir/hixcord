@@ -55,7 +55,7 @@ export const DeleteServerModal = () => {
       <DialogContent className="bg-[#313338] text-white p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-start font-bold">
-            <span>Delete '{server?.name}' </span>
+            <span>Delete &apos;{server?.name}&apos; </span>
           </DialogTitle>
           <DialogDescription className="text-slate-200/95 text-start text-1xl" >
             Are you sure you want to delete <span className="font-semibold text-white text-1xl">{server?.name}</span>? This action connot be undone.

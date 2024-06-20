@@ -55,10 +55,10 @@ export const LeaveServerModal = () => {
       <DialogContent className="bg-[#313338] text-white p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-start font-bold">
-            <span>Leave '{server?.name}' </span>
+            <span>Leave &apos;{server?.name}&apos; </span>
           </DialogTitle>
           <DialogDescription className="text-slate-200/95 text-start text-1xl" >
-            Are you sure you want to leave <span className="font-semibold text-white text-1xl">{server?.name}</span>? You won't be able to rejoin this server unless you are re-invited.
+            Are you sure you want to leave <span className="font-semibold text-white text-1xl">{server?.name}</span>? You won&apos;t be able to rejoin this server unless you are re-invited.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="p-3 flex items-center">
