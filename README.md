@@ -1,6 +1,6 @@
 # Hixcord
 
-Welcome to **Hixcord**! This chat application is inspired by the popular communication platform, Discord. MyChatApp aims to provide a seamless and interactive messaging experience.
+Welcome to **Hixcord**! This chat application is inspired by the popular communication platform, Discord. Hixcord aims to provide a seamless and interactive messaging experience.
 
 ## Features
 
