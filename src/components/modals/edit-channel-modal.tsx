@@ -95,7 +95,7 @@ export const EditChannelModal = () => {
 
   return (
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
-      <DialogContent className="bg-white text-black p-0 overflow-hidden">
+      <DialogContent className="bg-white text-black dark:bg-[#313338] dark:text-white p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
             Edit Channel
@@ -109,7 +109,7 @@ export const EditChannelModal = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-white">
                       Channel name
                     </FormLabel>
                     <FormControl>
@@ -117,7 +117,7 @@ export const EditChannelModal = () => {
                         disabled={isLoading}
                         placeholder="Enter channel name"
                         {...field}
-                        className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        className="bg-zinc-300/50 dark:bg-zinc-700/75 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0"
                       />
                     </FormControl>
                     <FormMessage />
@@ -136,16 +136,16 @@ export const EditChannelModal = () => {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="bg-zinc-300/50 border-0 focus:ring-0 text-black ring-offset-0 focus:ring-offset-0 capitalize outline-none">
+                        <SelectTrigger className="bg-zinc-300/50 dark:bg-zinc-700/75 dark:text-white border-0 focus:ring-0 text-black ring-offset-0 focus:ring-offset-0 capitalize outline-none">
                           <SelectValue placeholder="Select a channel type" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent>
+                      <SelectContent className="dark:bg-[#313338] border-none">
                         {Object.values(ChannelType).map((type) => (
                           <SelectItem
                             key={type}
                             value={type}
-                            className="capitalize"
+                            className="capitalize dark:bg-[#313338] dark:hover:bg-zinc-700/75"
                           >
                             {type.toLowerCase()}
                           </SelectItem>
@@ -157,7 +157,7 @@ export const EditChannelModal = () => {
                 )}
               />
             </div>
-            <DialogFooter className="bg-gray-100 px-6 py-4">
+            <DialogFooter className="bg-gray-100 dark:bg-[#313338] px-6 py-4">
               <Button variant={"primary"} disabled={isLoading}>
                 Save
               </Button>

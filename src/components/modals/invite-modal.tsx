@@ -63,20 +63,20 @@ export const InviteModal = () => {
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-white text-black p-0 overflow-hidden">
+      <DialogContent className="bg-white text-black dark:bg-[#313338] dark:text-white p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
             Invite Friends
           </DialogTitle>
         </DialogHeader>
         <div className="p-6">
-          <Label className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+          <Label className="uppercase text-xs font-bold text-zinc-500 dark:text-white">
             Server invite link
           </Label>
           <div className="flex items-center mt-2 gap-x-2">
             <Input
               disabled={isLoading}
-              className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+              className="bg-zinc-300/50 dark:bg-zinc-700/75 dark:text-white border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
               value={inviteUrl}
             />
             <Button disabled={isLoading} onClick={onCopy} size="icon">
@@ -92,7 +92,7 @@ export const InviteModal = () => {
             disabled={isLoading}
             variant={"link"}
             size={"sm"}
-            className="text-xs text-zinc-500 mt-4 gap-2"
+            className="text-xs text-zinc-500 dark:text-white mt-4 gap-2"
           >
             Generate a new Link
             <RefreshCcw className="h-4 w-4" />
