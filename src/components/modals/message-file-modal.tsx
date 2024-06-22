@@ -13,6 +13,7 @@ import FileUpload from "../file-upload"
 import axios from "axios"
 import { useRouter } from "next/navigation"
 import { useModal } from "../../../hooks/use-modal-store"
+import ChatFileUpload from "../chat-file-upload"
 
 const formSchema = z.object({
     fileUrl: z.string().min(1,{
@@ -81,7 +82,7 @@ export const MessageFileModal = () => {
                         <FormField control={form.control} name="fileUrl" render={({field})=>(
                             <FormItem>
                                 <FormControl>
-                                    <FileUpload endpoint="messageFile" value={field.value} onChange={field.onChange}/>
+                                    <ChatFileUpload endpoint="chatMessageFile" value={field.value} onChange={field.onChange}/>
                                 </FormControl>
                             </FormItem>
                         )} />
