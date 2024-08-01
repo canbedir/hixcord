@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { SocketProvider } from "@/components/providers/socket-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
+import NavigationSidebar from "@/components/navigation/navigation-sidebar";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -34,7 +35,14 @@ export default function RootLayout({
             <SocketProvider>
               <ModalProvider />
               <QueryProvider>
-              {children}
+                <div style={{ display: 'flex', height: '100vh' }}>
+                  <div>
+                    <NavigationSidebar />
+                  </div>
+                  <main style={{ flexGrow: 1, overflow: 'auto' }}>
+                    {children}
+                  </main>
+                </div>
               </QueryProvider>
             </SocketProvider>
           </ThemeProvider>

@@ -8,6 +8,7 @@ import { ScrollArea } from "../ui/scroll-area";
 import NavigationItem from "./navigation-item";
 import { ModeToggle } from "../mode-toggle";
 import { UserButton } from "@clerk/nextjs";
+import NavigationHome from "./navigation-home";
 
 const NavigationSidebar = async () => {
   const profile = await currentProfile();
@@ -28,7 +29,7 @@ const NavigationSidebar = async () => {
 
   return (
     <div className="space-y-4 flex flex-col items-center h-screen text-primary w-full dark:bg-[#1E1F22] py-3">
-      <NavigationAction />
+      <NavigationHome/>
       <Separator className="h-[1px] bg-zinc-300 dark:bg-zinc-700 rounded-md w-10 mx-auto" />
       <ScrollArea className="flex-1 w-full">
         {servers.map((server) => (
@@ -40,6 +41,7 @@ const NavigationSidebar = async () => {
             />
           </div>
         ))}
+      <NavigationAction />
       </ScrollArea>
       <div className="pb-3 mt-auto flex items-center flex-col gap-y-4">
         <ModeToggle />
